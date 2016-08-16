@@ -18,33 +18,9 @@ appControllers.controller('appCtrl', function($scope, $q, $timeout) {
   init();
 
   function init() {
-
-    // for (var i = 0; i < 8; i++) {
-    //   prom(i).then(function(result) {
-    //     console.log(result);
-    //     return prom2(result);
-    //   }).then(function(result) {
-    //     console.log(result);
-    //   }).catch(function () {
-    //     console.log('error');
-    //   });
-    // }
-
     callsArray = arr.map(function(ar) {
       return prom(ar).then(function(result) {
-        // console.log(result);
-        // prom2(result).then(function(result) {
-        //   console.log(result);
-        // });
-
-        var bla = prom2(result).then(function(result) {
-          if (true) {
-            console.log('true');
-          } else {
-            console.log('false');
-          }
-          console.log(result);
-        });
+        var bla = hghghg(result);
         callsArray2.push(bla);
         return $q.all(callsArray2).then(function(values) {
           console.log(result);
@@ -54,6 +30,12 @@ appControllers.controller('appCtrl', function($scope, $q, $timeout) {
 
     $q.all(callsArray).then(function(values) {
       console.log(values);
+    });
+  }
+
+  function hghghg(result) {
+    return prom2(result).then(function(result) {
+      console.log(result);
     });
   }
 

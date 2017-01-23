@@ -5,7 +5,7 @@ appControllers = angular.module('appControllers', []);
 appControllers.controller('appCtrl', function($scope, $q, $timeout) {
 
   $scope.test1 = "";
-  $scope.test2 = "";
+  $scope.test2 = "asdasdasd";
   $scope.test3 = "";
 
   var arr = ["12q3", "asdasd", "213", "jgjg", "89758"];
@@ -24,12 +24,14 @@ appControllers.controller('appCtrl', function($scope, $q, $timeout) {
         callsArray2.push(bla);
         return $q.all(callsArray2).then(function(values) {
           console.log(result);
+          console.log(blaaaaaaaaaaaaaaaaaaaaaaaaaaaa);
         });
       });
     });
 
     $q.all(callsArray).then(function(values) {
       console.log(values);
+      console.log(blaaaaaaaaaaaaaaaaaaaaaaaaaaaa);
     });
   }
 

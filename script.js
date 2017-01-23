@@ -5,7 +5,7 @@ appControllers = angular.module('appControllers', []);
 appControllers.controller('appCtrl', function($scope, $q, $timeout) {
 
   $scope.test1 = "";
-  $scope.test2 = "";
+  $scope.test2 = "11111111111111111";
   $scope.test3 = "";
 
   var arr = ["12q3", "asdasd", "213", "jgjg", "89758"];
@@ -22,9 +22,6 @@ appControllers.controller('appCtrl', function($scope, $q, $timeout) {
       return prom(ar).then(function(result) {
         var bla = hghghg(result);
         callsArray2.push(bla);
-        return $q.all(callsArray2).then(function(values) {
-          console.log(result);
-        });
       });
     });
 

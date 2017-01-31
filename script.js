@@ -27,22 +27,12 @@ appControllers.controller('appCtrl', function($scope, $q, $timeout) {
 
     $q.all(callsArray).then(function(values) {
       console.log(values);
-      console.log(blaaaaaaaaaaaaaaaaaaaaaaaaaaaa);
+      console.log(blaaaaaaaaaaaaaaaaaa);
     });
-  }
-
-  function hghghg(result) {
-    return prom2(result).then(function(result) {
-      console.log(result);
+    $q.all(callsArray).then(function(values) {
+      console.log(values);
+      console.log(blaaaaaaaaaaaaaaaaaa);
     });
-  }
-
-  function prom(text) {
-
-    return $timeout(function() {
-      return text;
-    }, 2000);
-
   }
 
   function prom2(text) {
